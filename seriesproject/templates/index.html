@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block body %}
+{% for i in series_list %}
+<img src="{{i.img.url}}" width="150" height="100">
+<a href="{% url 'seriesapp:details' i.id %}">.{{i.name}}--{{i.year}}<br>
+<!--{{i.desc}}<br><br>-->
+
+{% endfor %}
+{% endblock %}
